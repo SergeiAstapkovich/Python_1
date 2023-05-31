@@ -11,10 +11,14 @@
 N = int(input('Введите длину массива: '))
 A = input('Введите элементы массива через пробел ').split()
 arr = list(map(int, A))
-print (arr)
-X = int(input('Введите искомое число: '))
-count = 0
-for i in range(N):
-    if arr[i] == X:
-        count += 1
-print('Данное число встречается ', count, 'раз')
+
+if len(arr) != N or N == 0:
+    print('Введенные элементы не соответствуют заявленному количеству')
+else:
+    print (arr)
+    X = int(input('Введите искомое число: '))
+    count = 0
+    for i in range(N):
+        if arr[i] == X:
+            count += 1
+    print('Данное число встречается ', count, 'раз')
